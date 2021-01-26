@@ -1,4 +1,6 @@
 csc /r:Growl.Connector.dll,Growl.CoreLibrary.dll /out:test.exe *.cs
+C:\Windows\Microsoft.NET\Framework\v3.5\csc.exe /reference:system.management.automation.dll /target:exe /out:E:\foo.exe /E:\foo.cs
+
 
 
 using System;
