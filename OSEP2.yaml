@@ -1,0 +1,66 @@
+- HttpUrls:
+  - /index/profile/create
+  - /hoola/singapore
+  - /i/need/to/find/home
+  HttpRequestHeaders:
+  - Name: X-API
+    Value: asdqweasdasdqdsadsa
+  - Name: User-Agent
+    Value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+  - Name: X-Versions
+    Value: '{GUID}'
+  HttpResponseHeaders:
+  - Name: hello
+    Value: world
+  - Name: Server
+    Value: Microsoft-IIS/10.5
+  - Name: popo
+    Value: kakakakakaka
+  HttpPostRequest: sahgdj=jasdhajkhdkj&dude={DATA}&instagram=fgasdasdjhgjh&google=yutuyt76tyughghv
+  HttpGetResponse: >-
+    <!DOCTYPE html>
+
+    <html>
+        <head>
+            <title>Example</title>
+        </head>
+        <body>
+            <p>This is an example of a simple {DATA} HTML page with one paragraph.</p>
+        </body>
+    </html>
+  HttpPostResponse: >-
+    <!DOCTYPE html>
+
+    <html>
+        <head>
+            <title>Example</title>
+        </head>
+        <body>
+            <p>This is {DATA} an example of a simple HTML page with one paragraph.</p>
+        </body>
+    </html>
+  Name: OSEP2
+  Description: OSEP2
+  Type: HTTP
+  MessageTransform: >-
+    public static class MessageTransform
+
+    {
+
+        public static string Transform(byte[] bytes)
+
+        {
+
+            return System.Convert.ToBase64String(bytes);
+
+        }
+
+        public static byte[] Invert(string str)
+
+        {
+
+            return System.Convert.FromBase64String(str);
+
+        }
+
+    }
